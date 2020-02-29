@@ -11,7 +11,6 @@ import {
 import { Hero } from './hero';
 
 
-
 /** In-memory database data */
 interface Db {
   [collectionName: string]: any[];
@@ -116,6 +115,6 @@ function getDbData() {
     }
   ];
 
-  
+
   return { heroes } as Db;
 }

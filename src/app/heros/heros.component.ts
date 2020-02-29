@@ -12,6 +12,7 @@ export class HerosComponent implements OnInit {
 
   loading$: Observable<boolean>;
   heroes$: Observable<Hero[]>;
+  selected:any;
 
   constructor(private heroService: HeroService) { 
     this.heroes$ = heroService.entities$;
@@ -21,6 +22,7 @@ export class HerosComponent implements OnInit {
   ngOnInit() {
     this.getHeroes();
     console.log(this.heroes$);
+    
   }
  
   add(hero: Hero) {
@@ -37,6 +39,17 @@ export class HerosComponent implements OnInit {
  
   update(hero: Hero) {
     this.heroService.update(hero);
+  }
+
+  close(){
+
+  }
+  select(event:any){
+
+  }
+
+  enableAddMode(){
+    
   }
 
 }
